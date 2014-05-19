@@ -7,3 +7,4 @@ link_with ['GDRouting-Example', 'GDRouting-ExampleTests']
 pod 'DProperty'
 pod 'JLRoutes'
 pod 'FastCoding'
+pod 'TheSidebarController'
