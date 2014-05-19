@@ -98,6 +98,7 @@
 		C6583101192ABC330003B203 /* NSObject+FastCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FastCoder.m"; sourceTree = "<group>"; };
 		C6583103192ABC740003B203 /* NSObject+GDLoggingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GDLoggingUtils.h"; sourceTree = "<group>"; };
 		C6583104192ABC740003B203 /* NSObject+GDLoggingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GDLoggingUtils.m"; sourceTree = "<group>"; };
+		C6583106192AC0950003B203 /* GDRouting.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GDRouting.podspec; path = ../../GDRouting.podspec; sourceTree = "<group>"; };
 		CB50723AE41248DBB1C23E89 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,6 +178,7 @@
 		C65830A5192AB72A0003B203 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C6583106192AC0950003B203 /* GDRouting.podspec */,
 				C65830A6192AB72A0003B203 /* GDRouting-Example-Info.plist */,
 				C65830A7192AB72A0003B203 /* InfoPlist.strings */,
 				C65830AA192AB72A0003B203 /* main.m */,
