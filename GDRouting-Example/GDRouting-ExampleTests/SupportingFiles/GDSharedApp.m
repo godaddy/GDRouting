@@ -9,18 +9,18 @@
 #import "GDSharedApp.h"
 #import "GDMenuItem.h"
 #import "GDRoute.h"
-#import "ViewController.h"
+#import "ManateeViewController.h"
 
 @implementation GDSharedApp
 
 + (UINavigationController *)baseNavigationController
 {
-	return [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+	return [[UINavigationController alloc] initWithRootViewController:[[ManateeViewController alloc] init]];
 }
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *viewControllerItem = [[GDMenuItem alloc] initWithTitle:@"SharedApp" iconImageName:@"" appClass:[ViewController class]];
+	GDMenuItem *viewControllerItem = [[GDMenuItem alloc] initWithTitle:@"SharedApp" iconImageName:@"" appClass:[ManateeViewController class]];
 	return @[viewControllerItem];
 }
 
