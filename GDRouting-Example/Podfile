@@ -1,0 +1,9 @@
+platform :ios, '7.0'
+
+inhibit_all_warnings!
+
+link_with ['GDRouting-Example', 'GDRouting-ExampleTests']
+
+pod 'DProperty'
+pod 'JLRoutes'
+pod 'FastCoding'
