@@ -11,14 +11,26 @@
 
 @class GDBaseParser;
 
+/**
+ *  Protocol that adds methods used for archiving, loading and deleting objects to/from disk.
+ */
 @protocol GDArchiving <NSObject>
 
-@optional
-
-+ (NSString *)getXMLFilePath;
-+ (GDBaseParser *)getXMLFileParser;
+/**
+ *  Read archived object from disk
+ *
+ *  @return Archived object.
+ */
 + (NSObject *)readArchivedObject;
+
+/**
+ *  Archives object to disk
+ */
 - (void)archiveObject;
+
+/**
+ *  Deletes archived object from disk
+ */
 + (void)deleteArchivedObject;
 
 @end

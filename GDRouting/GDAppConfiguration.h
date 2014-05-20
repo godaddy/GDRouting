@@ -10,12 +10,12 @@
 #import "GDArchiving.h"
 
 /**
- *  GDAppConfiguration is an archivable object used to store configuration information about the app. We plan on 
+ *  GDAppConfiguration is an archivable object used to store configuration information about the app. 
  */
 @interface GDAppConfiguration : NSObject <GDArchiving>
 
 /**
- *  Returns an array of GDUsableApp objects for use in GDAppManager to configure GDRoutes and GDMenuItems.
+ *  Array of GDUsableApp objects for use in GDAppManager to configure GDRoutes and GDMenuItems.
  */
 @property(strong, nonatomic) NSArray *usableAppArray;
 
