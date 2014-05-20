@@ -1,6 +1,6 @@
 //
 //  GDArchiving.h
-//  GoDaddyDomainBuy
+//  Go Daddy Operating Company, LLCDomainBuy
 //
 //  Created by Jonah G. Neugass on 2/21/14.
 //
