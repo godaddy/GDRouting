@@ -1,19 +1,16 @@
 PODS:
-  - DProperty (0.0.2)
   - FastCoding (2.1.8)
   - JLRoutes (1.5.1)
   - TheSidebarController (0.6)
 
 DEPENDENCIES:
-  - DProperty
   - FastCoding
   - JLRoutes
   - TheSidebarController
 
 SPEC CHECKSUMS:
-  DProperty: 5ebf4fe85b3cf2e4a59091243f58032a5894593f
-  FastCoding: fc6001bcd47b216f9e92573556fe1dad9c98fef8
-  JLRoutes: 4ca144189633c57b061970f54c45b95b7e24c558
-  TheSidebarController: 3623bf4f9e0c0f86f51256b0fb0ec3350e95decb
+  FastCoding: cc08e6fe71e7c8c065f53a109511983861cb63c8
+  JLRoutes: 3400fe314fc01c861a14ff7e183d209b0cd302ae
+  TheSidebarController: 9c770ae6ffbd153839e02b3148584b2fcd857d81
 
 COCOAPODS: 0.32.1

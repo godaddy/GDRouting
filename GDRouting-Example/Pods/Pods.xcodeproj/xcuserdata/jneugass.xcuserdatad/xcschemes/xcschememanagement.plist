@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-DProperty.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-FastCoding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>690940E7EBCB42A68F756CC1</key>
+		<key>0F8D1E4A4E3A4CFA9DC870C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7597C23C759E43CC9313AB4B</key>
+		<key>215F5B885C7146B5AA67D104</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>764D1A56FF0A4EB180983518</key>
+		<key>8428B833833646DABF6C2B54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB7BE18E677B43A8A2CF23F5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F3FB4DFB1E6947B7AFD58071</key>
+		<key>88C54AD2729F4DA8BA8ABE6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
   s.source        = { :git => "https://github.com/godaddy/GDRouting", :tag => "0.0.1" }
   s.source_files  = 'GDRouting'
   s.requires_arc  = true
-  s.dependency 'DProperty'
   s.dependency 'JLRoutes'
   s.dependency 'FastCoding'
 end

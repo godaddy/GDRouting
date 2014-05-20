@@ -1,3 +1,0 @@
-@interface NSObject(DProperty)
-
-@end

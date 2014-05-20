@@ -14,15 +14,6 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>MIT
-</string>
-			<key>Title</key>
-			<string>DProperty</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>FastCoding
 
 Version 2.1.7, January 15th, 2014

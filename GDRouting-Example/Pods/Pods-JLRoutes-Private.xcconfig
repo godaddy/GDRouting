@@ -1,5 +1,5 @@
 #include "Pods-JLRoutes.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/JLRoutes" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/DProperty" "${PODS_ROOT}/Headers/FastCoding" "${PODS_ROOT}/Headers/JLRoutes" "${PODS_ROOT}/Headers/TheSidebarController" "${PODS_ROOT}/Headers/TheSidebarController/TheSidebarController" "${PODS_ROOT}/Headers/TheSidebarController/TheSidebarController/Animations"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/JLRoutes" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/FastCoding" "${PODS_ROOT}/Headers/JLRoutes" "${PODS_ROOT}/Headers/TheSidebarController" "${PODS_ROOT}/Headers/TheSidebarController/TheSidebarController" "${PODS_ROOT}/Headers/TheSidebarController/TheSidebarController/Animations"
 OTHER_LDFLAGS = -ObjC ${PODS_JLROUTES_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}

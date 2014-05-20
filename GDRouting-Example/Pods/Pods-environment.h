@@ -6,12 +6,6 @@
 // project.
 
 
-// DProperty
-#define COCOAPODS_POD_AVAILABLE_DProperty
-#define COCOAPODS_VERSION_MAJOR_DProperty 0
-#define COCOAPODS_VERSION_MINOR_DProperty 0
-#define COCOAPODS_VERSION_PATCH_DProperty 2
-
 // FastCoding
 #define COCOAPODS_POD_AVAILABLE_FastCoding
 #define COCOAPODS_VERSION_MAJOR_FastCoding 2
