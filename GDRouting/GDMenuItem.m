@@ -10,14 +10,13 @@
 
 @implementation GDMenuItem
 
-- (instancetype) initWithTitle:(NSString *)inTitle iconImageName:(NSString *)inIconImageName appClass:(Class)inAppClass
+- (instancetype) initWithTitle:(NSString *)inTitle iconImageName:(NSString *)inIconImageName
 {
     self = [super init];
     if( self != nil )
     {
         self.title = inTitle;
         self.iconImageName = inIconImageName;
-        self.appClass = inAppClass;
     }
     return self;
 }

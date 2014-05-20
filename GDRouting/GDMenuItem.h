@@ -13,9 +13,8 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *iconImageName;
 @property (nonatomic, strong) NSString *sectionTitle;
-@property (nonatomic, strong) Class appClass;
 @property (nonatomic) NSInteger displayOrder;
 
-- (instancetype) initWithTitle:(NSString *)inTitle iconImageName:(NSString *)inIconImageName appClass:(Class)inAppClass;
+- (instancetype) initWithTitle:(NSString *)inTitle iconImageName:(NSString *)inIconImageName;
 
 @end

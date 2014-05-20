@@ -20,7 +20,7 @@
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *viewControllerItem = [[GDMenuItem alloc] initWithTitle:@"SharedApp" iconImageName:@"" appClass:[ManateeViewController class]];
+	GDMenuItem *viewControllerItem = [[GDMenuItem alloc] initWithTitle:@"SharedApp" iconImageName:@""];
 	return @[viewControllerItem];
 }
 

@@ -20,7 +20,7 @@
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:@"CATS" iconImageName:@"" appClass:[CatViewController class]];
+	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:@"CATS" iconImageName:@""];
 	return @[menuItem];
 }
 

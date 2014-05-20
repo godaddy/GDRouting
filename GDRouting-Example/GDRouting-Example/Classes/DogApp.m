@@ -22,7 +22,7 @@
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:@"DOGS" iconImageName:@"" appClass:[DogViewController class]];
+	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:@"DOGS" iconImageName:@""];
 	return @[menuItem];
 }
 

@@ -20,7 +20,7 @@
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *manateeItem = [[GDMenuItem alloc] initWithTitle:@"MANATEES" iconImageName:@"" appClass:[ManateeViewController class]];
+	GDMenuItem *manateeItem = [[GDMenuItem alloc] initWithTitle:@"MANATEES" iconImageName:@""];
 	return @[manateeItem];
 }
 
