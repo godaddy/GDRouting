@@ -8,7 +8,6 @@
 
 #import "FastCoder.h"
 #import "NSObject+FastCoder.h"
-#import "NSObject+GDLoggingUtils.h"
 
 @implementation NSObject (FastCoder)
 
@@ -21,16 +20,14 @@
 {
 	NSString *path = [[self documentsDirectory] stringByAppendingPathComponent:inFileName];
 	@try
-	{
-		//attempt to load saved file
-        
+	{	        
 		NSData *data = [NSData dataWithContentsOfFile:path];
 		NSObject *returnObject = [FastCoder objectWithData:data];
 		return returnObject;
 	}
 	@catch (NSException *exception)
 	{
-		[NSObject logError:[NSString stringWithFormat:@"File %@ read operation threw an exception:%@", path, exception.reason]];
+		NSLog(@"File %@ read operation threw an exception:%@", path, exception.reason);
 	}
 }
 
@@ -45,7 +42,7 @@
 	}
 	@catch (NSException *exception)
 	{
-		[NSObject logError:[NSString stringWithFormat:@"File %@ write operation threw an exception:%@", path, exception.reason]];
+		NSLog(@"File %@ write operation threw an exception:%@", path, exception.reason);
 	}
 }
 
@@ -59,12 +56,12 @@
 		NSError *error;
 		if ([fileMgr fileExistsAtPath:path] && [fileMgr removeItemAtPath:path error:&error] != YES)
 		{
-			[NSObject logError:[NSString stringWithFormat:@"Unable to delete file: %@", [error localizedDescription]]];
+            NSLog(@"Unable to delete file: %@", [error localizedDescription]);
 		}
 	}
 	@catch (NSException *exception)
 	{
-		[NSObject logError:[NSString stringWithFormat:@"File %@ delete operation threw an exception:%@", path, exception.reason]];
+		NSLog(@"File %@ delete operation threw an exception:%@", path, exception.reason);
 	}
 }
 

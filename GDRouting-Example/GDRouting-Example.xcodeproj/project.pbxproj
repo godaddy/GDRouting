@@ -49,7 +49,6 @@
 		C6583141192ACDB30003B203 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C658313E192ACDB30003B203 /* dog.jpg */; };
 		C6583142192ACDB30003B203 /* manatee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C658313F192ACDB30003B203 /* manatee.jpg */; };
 		C6583144192BC75A0003B203 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6583143192BC75A0003B203 /* LICENSE */; };
-		C6583147192BCFB40003B203 /* NSObject+GDLoggingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C6583146192BCFB40003B203 /* NSObject+GDLoggingUtils.m */; };
 		D5657DBEAD164A6098BBDC13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB50723AE41248DBB1C23E89 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -132,8 +131,6 @@
 		C658313E192ACDB30003B203 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		C658313F192ACDB30003B203 /* manatee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manatee.jpg; sourceTree = "<group>"; };
 		C6583143192BC75A0003B203 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
-		C6583145192BCFB40003B203 /* NSObject+GDLoggingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GDLoggingUtils.h"; sourceTree = "<group>"; };
-		C6583146192BCFB40003B203 /* NSObject+GDLoggingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GDLoggingUtils.m"; sourceTree = "<group>"; };
 		CB50723AE41248DBB1C23E89 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -260,8 +257,6 @@
 		C65830E7192ABA690003B203 /* GDRouting */ = {
 			isa = PBXGroup;
 			children = (
-				C6583145192BCFB40003B203 /* NSObject+GDLoggingUtils.h */,
-				C6583146192BCFB40003B203 /* NSObject+GDLoggingUtils.m */,
 				C65830E8192ABA690003B203 /* GDAppConfiguration.h */,
 				C65830E9192ABA690003B203 /* GDAppConfiguration.m */,
 				C65830EA192ABA690003B203 /* GDAppManager.h */,
@@ -508,7 +503,6 @@
 				C65830FE192ABA690003B203 /* GDUsableApp.m in Sources */,
 				C658312C192ACD200003B203 /* DogApp.m in Sources */,
 				C65830FC192ABA690003B203 /* GDTableDataModel.m in Sources */,
-				C6583147192BCFB40003B203 /* NSObject+GDLoggingUtils.m in Sources */,
 				C65830AF192AB72A0003B203 /* AppDelegate.m in Sources */,
 				C6583134192ACD200003B203 /* MainMenuViewController.m in Sources */,
 				C6583133192ACD200003B203 /* CatViewController.m in Sources */,
