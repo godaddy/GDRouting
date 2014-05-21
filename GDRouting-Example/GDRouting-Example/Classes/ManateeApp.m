@@ -10,28 +10,33 @@
 #import "ManateeViewController.h"
 #import "GDMenuItem.h"
 #import "GDRoute.h"
+#import "UIStoryboard+QuickFetch.h"
 
 @implementation ManateeApp
 
+static NSString *const StoryboardName = @"Main";
+static NSString *const ViewControllerIdentifier = @"ManateeViewController";
+static NSString *const MenuItemTitle = @"MANATEES";
+
 + (UINavigationController *)baseNavigationController
 {
-	return [[UINavigationController alloc] initWithRootViewController:[[ManateeViewController alloc] init]];
+	return [[UINavigationController alloc] initWithRootViewController:[UIStoryboard instantiateViewControllerWithIdentifier:ViewControllerIdentifier andStoryboardName:StoryboardName]];
 }
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *manateeItem = [[GDMenuItem alloc] initWithTitle:@"MANATEES" iconImageName:@""];
-	return @[manateeItem];
+	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:MenuItemTitle iconImageName:nil];
+	return @[menuItem];
 }
 
 + (NSDictionary *)routesToRegister
 {
-	GDRoute *route = [GDRoute routeWithURLString:@"/manateeviewcontroller" andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
+	GDRoute *route = [GDRoute routeWithURLString:[NSString stringWithFormat:@"/%@", ViewControllerIdentifier] andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
 	    [routingDelegate popRoutedViewControllerToRootViewController:YES parameters:nil];
 	    return YES;
 	}];
 
-    NSDictionary *routeDictionary = @{@"manateeviewcontroller" : route};
+    NSDictionary *routeDictionary = @{ViewControllerIdentifier : route};
 	return routeDictionary;
 }
 

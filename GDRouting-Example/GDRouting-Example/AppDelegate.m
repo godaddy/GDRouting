@@ -24,6 +24,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    /**
+     *  Create the GDAppConfiguration object, configure it with sub-apps and archive it
+     */
     GDAppConfiguration *appConfiguration = [[GDAppConfiguration alloc] init];
     
     GDUsableApp *manateeApp = [[GDUsableApp alloc] init];
@@ -43,6 +46,9 @@
     appConfiguration.usableAppArray = @[manateeApp, catApp, dogApp];
     [appConfiguration archiveObject];
     
+    /**
+     *  Set up the TheSidebarController and set up our views
+     */
     MainMenuViewController *mainMenuController = [MainMenuViewController mainMenuViewControllerFromStoryboard];
     
     self.navController = (UINavigationController *)self.window.rootViewController;
@@ -50,6 +56,9 @@
     TheSidebarController *sidebarController = [[TheSidebarController alloc] initWithContentViewController:self.navController leftSidebarViewController:mainMenuController];
     self.window.rootViewController = sidebarController;
     
+    /**
+     *  Create an instance of GDAppManager and register our routes
+     */
     GDAppManager *appManager = [[GDAppManager alloc] initWithUsableAppArray:appConfiguration.usableAppArray];
     [appManager registerRoutesForAppsWithRoutingDelegate:self];
     

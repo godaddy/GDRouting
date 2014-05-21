@@ -10,34 +10,35 @@
 #import "GDMenuItem.h"
 #import "GDRoute.h"
 #import "DogViewController.h"
+#import "UIStoryboard+QuickFetch.h"
 
 @implementation DogApp
 
+static NSString *const StoryboardName = @"Main";
+static NSString *const ViewControllerIdentifier = @"DogViewController";
+static NSString *const MenuItemTitle = @"DOGS";
+
 + (UINavigationController *)baseNavigationController
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    DogViewController *dogController = [storyboard instantiateViewControllerWithIdentifier:@"DogViewController"];
-	return [[UINavigationController alloc] initWithRootViewController:dogController];
+	return [[UINavigationController alloc] initWithRootViewController:[UIStoryboard instantiateViewControllerWithIdentifier:ViewControllerIdentifier andStoryboardName:StoryboardName]];
 }
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:@"DOGS" iconImageName:@""];
+	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:MenuItemTitle iconImageName:nil];
 	return @[menuItem];
 }
 
 + (NSDictionary *)routesToRegister
 {
-	GDRoute *route = [GDRoute routeWithURLString:@"/dogviewcontroller" andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
-
+	GDRoute *route = [GDRoute routeWithURLString:[NSString stringWithFormat:@"/%@", ViewControllerIdentifier] andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
         UINavigationController *navController = [DogApp baseNavigationController];
 	    [routingDelegate presentRoutedViewController:navController animated:YES parameters:nil];
 	    return YES;
 	}];
     
-    NSDictionary *routeDictionary = @{@"dogviewcontroller" : route};
+    NSDictionary *routeDictionary = @{ViewControllerIdentifier : route};
 	return routeDictionary;
 }
-
 
 @end

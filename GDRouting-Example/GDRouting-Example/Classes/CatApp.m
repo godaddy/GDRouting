@@ -10,31 +10,33 @@
 #import "CatViewController.h"
 #import "GDMenuItem.h"
 #import "GDRoute.h"
+#import "UIStoryboard+QuickFetch.h"
 
 @implementation CatApp
 
+static NSString *const StoryboardName = @"Main";
+static NSString *const ViewControllerIdentifier = @"CatViewController";
+static NSString *const MenuItemTitle = @"CATS";
+
 + (UINavigationController *)baseNavigationController
 {
-	return [[UINavigationController alloc] initWithRootViewController:[[CatViewController alloc] init]];
+	return [[UINavigationController alloc] initWithRootViewController:[UIStoryboard instantiateViewControllerWithIdentifier:ViewControllerIdentifier andStoryboardName:StoryboardName]];
 }
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:@"CATS" iconImageName:@""];
+	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:MenuItemTitle iconImageName:nil];
 	return @[menuItem];
 }
 
 + (NSDictionary *)routesToRegister
 {
-	GDRoute *route = [GDRoute routeWithURLString:@"/catviewcontroller" andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        CatViewController *catController = [storyboard instantiateViewControllerWithIdentifier:@"CatViewController"];
-        [routingDelegate pushRoutedViewController:catController animated:YES parameters:nil];
-        
+	GDRoute *route = [GDRoute routeWithURLString:[NSString stringWithFormat:@"/%@", ViewControllerIdentifier] andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
+        [routingDelegate pushRoutedViewController:[UIStoryboard instantiateViewControllerWithIdentifier:ViewControllerIdentifier andStoryboardName:StoryboardName] animated:YES parameters:nil];
 	    return YES;
 	}];
     
-    NSDictionary *routeDictionary = @{@"catviewcontroller" : route};
+    NSDictionary *routeDictionary = @{ViewControllerIdentifier : route};
 	return routeDictionary;
 }
 

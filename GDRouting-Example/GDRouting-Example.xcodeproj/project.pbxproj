@@ -49,6 +49,7 @@
 		C6583141192ACDB30003B203 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C658313E192ACDB30003B203 /* dog.jpg */; };
 		C6583142192ACDB30003B203 /* manatee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C658313F192ACDB30003B203 /* manatee.jpg */; };
 		C6583144192BC75A0003B203 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6583143192BC75A0003B203 /* LICENSE */; };
+		C6C0EC01192D1ED300E18EB1 /* UIStoryboard+QuickFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0EC00192D1ED300E18EB1 /* UIStoryboard+QuickFetch.m */; };
 		D5657DBEAD164A6098BBDC13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB50723AE41248DBB1C23E89 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,8 @@
 		C658313E192ACDB30003B203 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		C658313F192ACDB30003B203 /* manatee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manatee.jpg; sourceTree = "<group>"; };
 		C6583143192BC75A0003B203 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
+		C6C0EBFF192D1ED300E18EB1 /* UIStoryboard+QuickFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+QuickFetch.h"; sourceTree = "<group>"; };
+		C6C0EC00192D1ED300E18EB1 /* UIStoryboard+QuickFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+QuickFetch.m"; sourceTree = "<group>"; };
 		CB50723AE41248DBB1C23E89 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -275,6 +278,8 @@
 				C65830F7192ABA690003B203 /* GDUsableApp.m */,
 				C6583100192ABC330003B203 /* NSObject+FastCoder.h */,
 				C6583101192ABC330003B203 /* NSObject+FastCoder.m */,
+				C6C0EBFF192D1ED300E18EB1 /* UIStoryboard+QuickFetch.h */,
+				C6C0EC00192D1ED300E18EB1 /* UIStoryboard+QuickFetch.m */,
 			);
 			name = GDRouting;
 			path = ../../GDRouting;
@@ -504,6 +509,7 @@
 				C658312C192ACD200003B203 /* DogApp.m in Sources */,
 				C65830FC192ABA690003B203 /* GDTableDataModel.m in Sources */,
 				C65830AF192AB72A0003B203 /* AppDelegate.m in Sources */,
+				C6C0EC01192D1ED300E18EB1 /* UIStoryboard+QuickFetch.m in Sources */,
 				C6583134192ACD200003B203 /* MainMenuViewController.m in Sources */,
 				C6583133192ACD200003B203 /* CatViewController.m in Sources */,
 				C658312B192ACD200003B203 /* CatApp.m in Sources */,
