@@ -5,6 +5,25 @@ GDRouting is a framework for using private CocoaPod repositories to modularizing
 
 This repo buids upon concepts taken from the blog post <a href="http://dev.hubspot.com/blog/architecting-a-large-ios-app-with-cocoapods">Using CocoaPods to Modularize a Big iOS App</a> by Anthony Roldan of HubSpot.
 
+<h2>GDMenuItem</h2>
+
+GDMenuItem hold properties that determine what shows up in the menu table view, these being title and iconImageName. It also has properies of displayOrder so that you can order menu items in a sub-app and sectionTitle if you want a section header to appear before the menu item.
+
+<pre>
+GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:MenuItemTitle andDisplayOrder:0];
+menuItem.sectionTitle = SectionTitle;
+</pre>
+
+<h2>GDRoute</h2>
+GDRoute stores information about the urlString and the routing block to be called when the route is selected
+ 
+ <pre>
+GDRoute *route = [GDRoute routeWithURLString:[NSString stringWithFormat:@"/%@", ViewControllerIdentifier] andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
+	[routingDelegate pushRoutedViewController:[UIStoryboard instantiateViewControllerWithIdentifier:ViewControllerIdentifier andStoryboardName:StoryboardName] animated:YES parameters:nil];
+	    return YES;
+	}];
+ </pre>
+ 
 <h2>GDBaseApp</h2>
 All sub-applications should have at least one class that implements this protocol. It is used to get menu items and routes used in the sub-app.
 
