@@ -57,4 +57,14 @@
     BOOL registeredRoutes = [appManager registerRoutesForAppsWithRoutingDelegate:nil];
     XCTAssertTrue(registeredRoutes, @"Routes not registered successfully");
 }
+
+- (void)testGetRouteDictionary
+{
+    GDUsableApp *usableApp = [[GDUsableApp alloc] init];
+    usableApp.appName = @"GDSharedApp";
+    usableApp.displayOrder = 0;
+    GDAppManager *appManager = [[GDAppManager alloc] initWithUsableAppArray:@[usableApp]];
+    NSDictionary *routeDictionary = [appManager getGDRouteDictionaryForApps];
+    XCTAssertTrue(routeDictionary.count > 0, @"routeDictionary count is 0");
+}
 @end

@@ -18,7 +18,9 @@ static NSString *const StoryboardName = @"Main";
 static NSString *const ViewControllerIdentifier = @"DogViewController";
 static NSString *const MoarDogViewControllerIdentifier = @"MoarDogViewController";
 static NSString *const MenuItemTitle = @"DOGS";
-static NSString *const SecondMenuItemTitle = @"MOAR DOGS";
+static NSString *const MoarMenuItemTitle = @"MOAR DOGS";
+static NSString *const SectionTitle = @"WOOF";
+
 + (UINavigationController *)baseNavigationController
 {
 	return [[UINavigationController alloc] initWithRootViewController:[UIStoryboard instantiateViewControllerWithIdentifier:ViewControllerIdentifier andStoryboardName:StoryboardName]];
@@ -27,8 +29,8 @@ static NSString *const SecondMenuItemTitle = @"MOAR DOGS";
 + (NSArray *)menuItems
 {
 	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:MenuItemTitle andDisplayOrder:0];
-    menuItem.sectionTitle = @"WOOF";
-    GDMenuItem *secondItem = [[GDMenuItem alloc] initWithTitle:SecondMenuItemTitle andDisplayOrder:1];
+    menuItem.sectionTitle = SectionTitle;
+    GDMenuItem *secondItem = [[GDMenuItem alloc] initWithTitle:MoarMenuItemTitle andDisplayOrder:1];
 	return @[secondItem, menuItem];
 }
 
@@ -42,7 +44,7 @@ static NSString *const SecondMenuItemTitle = @"MOAR DOGS";
     
     GDRoute *secondRoute = [GDRoute routeWithURLString:[NSString stringWithFormat:@"/%@", MoarDogViewControllerIdentifier] andDisplayOrder:1 andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
         
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[UIStoryboard instantiateViewControllerWithIdentifier:MoarDogViewControllerIdentifier andStoryboardName:@"Main"]];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[UIStoryboard instantiateViewControllerWithIdentifier:MoarDogViewControllerIdentifier andStoryboardName:StoryboardName]];
 	    [routingDelegate presentRoutedViewController:navController animated:YES parameters:nil];
 	    return YES;
 	}];
