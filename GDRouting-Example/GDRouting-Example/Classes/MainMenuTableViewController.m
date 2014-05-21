@@ -12,6 +12,8 @@
 #import "GDAppConfiguration.h"
 #import "GDAppManager.h"
 #import "MainMenuTableViewCell.h"
+#import "GDConfigurableTableCell.h"
+#import "GDEnums.h"
 
 @interface MainMenuTableViewController ()
 
@@ -70,8 +72,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GDTableDataModelObject *modelObject = [self.dataModel objectInDataArrayAtIndexPath:indexPath];
-    MainMenuTableViewCell *cell = (MainMenuTableViewCell *)[tableView dequeueReusableCellWithIdentifier:modelObject.parameterDictionary[@"cellIdentifier"] forIndexPath:indexPath];
-    cell.menuItemLabel.text = modelObject.parameterDictionary[@"title"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:modelObject.parameterDictionary[@(GDCellConfigKeyCellIdentifier)] forIndexPath:indexPath];
+    if( [cell conformsToProtocol:@protocol(GDConfigurableTableCell)])
+    {
+        [cell performSelector:@selector(configureWithParamaters:) withObject:modelObject.parameterDictionary];
+    }
     return cell;
 }
 

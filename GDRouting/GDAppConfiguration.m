@@ -14,10 +14,11 @@
 #pragma mark - GDArchiving protocol methods
 
 static NSString * const ArchiveName = @"GDAppConfiguration.fast";
+static NSString * const SortKey = @"displayOrder";
 
 - (void)setUsableAppArray:(NSArray *)inUsableAppArray
 {
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"displayOrder" ascending:YES];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:SortKey ascending:YES];
     NSArray *sortedArray =  [inUsableAppArray sortedArrayUsingDescriptors:@[sort]];
     _usableAppArray = [[NSArray alloc] initWithArray:sortedArray];
 }

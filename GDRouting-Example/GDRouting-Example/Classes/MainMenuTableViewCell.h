@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GDConfigurableTableCell.h"
 
-@interface MainMenuTableViewCell : UITableViewCell
+@interface MainMenuTableViewCell : UITableViewCell<GDConfigurableTableCell>
 
 @property(nonatomic, weak) IBOutlet UILabel *menuItemLabel;
 

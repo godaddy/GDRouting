@@ -134,6 +134,8 @@
 		C6583143192BC75A0003B203 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		C6C0EBFF192D1ED300E18EB1 /* UIStoryboard+QuickFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+QuickFetch.h"; sourceTree = "<group>"; };
 		C6C0EC00192D1ED300E18EB1 /* UIStoryboard+QuickFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+QuickFetch.m"; sourceTree = "<group>"; };
+		C6C0EC02192D273A00E18EB1 /* GDConfigurableTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDConfigurableTableCell.h; sourceTree = "<group>"; };
+		C6C0EC03192D29AC00E18EB1 /* GDEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDEnums.h; sourceTree = "<group>"; };
 		CB50723AE41248DBB1C23E89 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -266,6 +268,8 @@
 				C65830EB192ABA690003B203 /* GDAppManager.m */,
 				C65830FF192ABBAB0003B203 /* GDArchiving.h */,
 				C65830EC192ABA690003B203 /* GDBaseApp.h */,
+				C6C0EC02192D273A00E18EB1 /* GDConfigurableTableCell.h */,
+				C6C0EC03192D29AC00E18EB1 /* GDEnums.h */,
 				C65830ED192ABA690003B203 /* GDMenuItem.h */,
 				C65830EE192ABA690003B203 /* GDMenuItem.m */,
 				C65830F0192ABA690003B203 /* GDRoute.h */,

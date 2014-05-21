@@ -8,26 +8,17 @@
 
 #import "MainMenuViewController.h"
 #import "MainMenuTableViewController.h"
+#import "UIStoryboard+QuickFetch.h"
 
-@interface MainMenuViewController ()
-
-@end
 
 @implementation MainMenuViewController
 
+static NSString *const StoryboardName = @"Main";
+static NSString *const ViewControllerIdentifier = @"MainMenuViewController";
+
 + (MainMenuViewController *)mainMenuViewControllerFromStoryboard
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    return [storyboard instantiateViewControllerWithIdentifier:@"MainMenuViewController"];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    return (MainMenuViewController *)[UIStoryboard instantiateViewControllerWithIdentifier:ViewControllerIdentifier andStoryboardName:StoryboardName];    
 }
 
 - (void)viewDidLoad

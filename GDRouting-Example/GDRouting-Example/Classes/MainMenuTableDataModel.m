@@ -10,6 +10,7 @@
 #import "GDTableDataModelObject.h"
 #import "GDMenuItem.h"
 #import "GDRoute.h"
+#import "GDEnums.h"
 
 @implementation MainMenuTableDataModel
 
@@ -28,12 +29,12 @@ NSString * const MainMenuTableHeaderCellIdentifier = @"MainMenuTableHeaderCell";
             GDRoute *route = inRouteArray[i];
             if( item.sectionTitle != nil )
             {
-                NSDictionary *parameterDictionary = @{@"title" : item.sectionTitle, @"cellIdentifier" : MainMenuTableHeaderCellIdentifier };
+                NSDictionary *parameterDictionary = @{@(GDCellConfigKeyTitle) : item.sectionTitle, @(GDCellConfigKeyCellIdentifier) : MainMenuTableHeaderCellIdentifier };
                 GDTableDataModelObject *modelObject = [[GDTableDataModelObject alloc] initWithParameterDictionary:parameterDictionary];
                 [section0Array addObject:modelObject];
             }
             
-            NSDictionary *parameterDictionary = @{@"title" : item.title, @"cellIdentifier" : MainMenuTableCellIdentifier };
+            NSDictionary *parameterDictionary = @{@(GDCellConfigKeyTitle): item.title, @(GDCellConfigKeyCellIdentifier) : MainMenuTableCellIdentifier };
             GDTableDataModelSelectedBlock selectedBlock = ^BOOL(NSDictionary *properties)
             {
                 NSURL *url = [route urlWithBaseAppURLString:inBaseAppURLString];

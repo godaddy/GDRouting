@@ -13,6 +13,8 @@
 
 @implementation GDAppManager
 
+static NSString * const SortKey = @"displayOrder";
+
 - (instancetype)initWithUsableAppArray:(NSArray *)inUsableAppArray
 {
     self = [super init];
@@ -34,7 +36,7 @@
             NSArray *menuItemArray = [appClass performSelector:@selector(menuItems)];
             if( menuItemArray != nil )
             {
-                NSSortDescriptor *sortDescriptior = [[NSSortDescriptor alloc] initWithKey:@"displayOrder" ascending:YES];
+                NSSortDescriptor *sortDescriptior = [[NSSortDescriptor alloc] initWithKey:SortKey ascending:YES];
                 NSArray *sortedItems = [menuItemArray sortedArrayUsingDescriptors:@[sortDescriptior]];
                 [allMenuItemArray addObjectsFromArray:sortedItems];
             }

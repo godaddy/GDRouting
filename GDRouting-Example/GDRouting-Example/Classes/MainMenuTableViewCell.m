@@ -7,28 +7,14 @@
 //
 
 #import "MainMenuTableViewCell.h"
+#import "GDEnums.h"
 
 @implementation MainMenuTableViewCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
 
-- (void)awakeFromNib
+- (void)configureWithParamaters:(NSDictionary *)inDictionary
 {
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+     self.menuItemLabel.text = inDictionary[@(GDCellConfigKeyTitle)];
 }
 
 @end
