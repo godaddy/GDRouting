@@ -22,26 +22,29 @@
 
 @implementation AppDelegate
 
+static NSString *const CatAppName = @"CatApp";
+static NSString *const DogAppName = @"DogApp";
+static NSString *const ManateeAppName = @"ManateeApp";
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     /**
-     *  Create the GDAppConfiguration object, configure it with sub-apps and archive it
+     *  Create the GDAppConfiguration object, configure it with sub-apps and archive it. This is the only time we will explicitly reference 
+     *  a sub-app
      */
     GDAppConfiguration *appConfiguration = [[GDAppConfiguration alloc] init];
     
     GDUsableApp *manateeApp = [[GDUsableApp alloc] init];
     manateeApp.displayOrder = 0;
-    manateeApp.appName = @"ManateeApp";
+    manateeApp.appName = ManateeAppName;
     
     GDUsableApp *catApp = [[GDUsableApp alloc] init];
-    catApp.displayOrder = 0;
-    catApp.appName = @"CatApp";
+    catApp.displayOrder = 1;
+    catApp.appName = CatAppName;
     
     GDUsableApp *dogApp = [[GDUsableApp alloc] init];
-    dogApp.displayOrder = 0;
-    dogApp.appName = @"DogApp";
-    
-    
+    dogApp.displayOrder = 2;
+    dogApp.appName = DogAppName;
     
     appConfiguration.usableAppArray = @[manateeApp, catApp, dogApp];
     [appConfiguration archiveObject];

@@ -47,8 +47,24 @@ static NSString * const SortKey = @"displayOrder";
 
 - (NSArray *)getGDRouteArrayForApps
 {
-    NSDictionary *routeDictionary  = [self getGDRouteDictionaryForApps];
-    return [routeDictionary allValues];
+    NSMutableArray *allRouteArray = [[NSMutableArray alloc] init];
+    for( GDUsableApp *usableApp in self.usableAppArray )
+    {
+        Class appClass = NSClassFromString(usableApp.appName);
+        if( [appClass conformsToProtocol:@protocol(GDBaseApp)])
+        {
+            NSDictionary *routeDictionary = [appClass performSelector:@selector(routesToRegister)];
+            
+            if( routeDictionary != nil )
+            {
+                NSArray *routeArray = [routeDictionary allValues];
+                NSSortDescriptor *sortDescriptior = [[NSSortDescriptor alloc] initWithKey:SortKey ascending:YES];
+                NSArray *sortedItems = [routeArray sortedArrayUsingDescriptors:@[sortDescriptior]];
+                [allRouteArray addObjectsFromArray:sortedItems];
+            }
+        }
+    }
+    return allRouteArray;
 }
 
 - (NSDictionary *)getGDRouteDictionaryForApps

@@ -31,7 +31,7 @@
     NSString *testTitle = @"TestTitle";
     NSString *iconName = @"IconName";
     NSString *sectionTitle = @"SectionTitle";
-    GDMenuItem *item = [[GDMenuItem alloc] initWithTitle:testTitle iconImageName:iconName];
+    GDMenuItem *item = [[GDMenuItem alloc] initWithTitle:testTitle andDisplayOrder:0 andIconImageName:iconName];
     item.sectionTitle = sectionTitle;
     
     XCTAssertTrue([testTitle isEqualToString:item.title], @"Title is not set correctly");

@@ -18,6 +18,13 @@
     return returnRoute;
 }
 
++(instancetype)routeWithURLString:(NSString *)inURLString andDisplayOrder:(NSInteger)inDisplayOrder andAction:(GDRoutingBlock)inRoutingBlock
+{
+    GDRoute *returnRoute = [GDRoute routeWithURLString:inURLString andAction:inRoutingBlock];
+    returnRoute.displayOrder = inDisplayOrder;
+    return returnRoute;
+}
+
 - (NSURL *)urlWithBaseAppURLString:(NSString *)inBaseAppURLString
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@:/%@",inBaseAppURLString, self.urlString]];

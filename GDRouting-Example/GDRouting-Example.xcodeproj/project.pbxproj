@@ -50,6 +50,7 @@
 		C6583142192ACDB30003B203 /* manatee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C658313F192ACDB30003B203 /* manatee.jpg */; };
 		C6583144192BC75A0003B203 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6583143192BC75A0003B203 /* LICENSE */; };
 		C6C0EC01192D1ED300E18EB1 /* UIStoryboard+QuickFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0EC00192D1ED300E18EB1 /* UIStoryboard+QuickFetch.m */; };
+		C6C0EC05192D516B00E18EB1 /* smiledog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C6C0EC04192D516B00E18EB1 /* smiledog.jpg */; };
 		D5657DBEAD164A6098BBDC13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB50723AE41248DBB1C23E89 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		C6C0EC00192D1ED300E18EB1 /* UIStoryboard+QuickFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+QuickFetch.m"; sourceTree = "<group>"; };
 		C6C0EC02192D273A00E18EB1 /* GDConfigurableTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDConfigurableTableCell.h; sourceTree = "<group>"; };
 		C6C0EC03192D29AC00E18EB1 /* GDEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDEnums.h; sourceTree = "<group>"; };
+		C6C0EC04192D516B00E18EB1 /* smiledog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smiledog.jpg; sourceTree = "<group>"; };
 		CB50723AE41248DBB1C23E89 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -326,6 +328,7 @@
 		C658313C192ACDB30003B203 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C6C0EC04192D516B00E18EB1 /* smiledog.jpg */,
 				C658313D192ACDB30003B203 /* cat.jpg */,
 				C658313E192ACDB30003B203 /* dog.jpg */,
 				C658313F192ACDB30003B203 /* manatee.jpg */,
@@ -420,6 +423,7 @@
 				C65830A9192AB72A0003B203 /* InfoPlist.strings in Resources */,
 				C6583140192ACDB30003B203 /* cat.jpg in Resources */,
 				C65830B2192AB72A0003B203 /* Main.storyboard in Resources */,
+				C6C0EC05192D516B00E18EB1 /* smiledog.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

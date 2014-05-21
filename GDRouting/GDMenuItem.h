@@ -33,11 +33,32 @@
 /**
  *  Constructor for GDMenuItem
  *
- *  @param inTitle         Title of the menu item
- *  @param inIconImageName Associated image displayed in the menu item cell
+ *  @param inTitle         - Title of the menu item
+ *  @param inIconImageName - Associated image displayed in the menu item cell
  *
  *  @return GDMenuItem instance
  */
-- (instancetype) initWithTitle:(NSString *)inTitle iconImageName:(NSString *)inIconImageName;
+- (instancetype) initWithTitle:(NSString *)inTitle andIconImageName:(NSString *)inIconImageName;
+
+/**
+ *  Constructor for GDMenuItem
+ *
+ *  @param inTitle        - Title of the menu item
+ *  @param inDisplayOrder - Display order of the menu item
+ *
+ *  @return GDMenuItem instance
+ */
+- (instancetype) initWithTitle:(NSString *)inTitle andDisplayOrder:(NSInteger)inDisplayOrder;
+
+/**
+ *   Constructor for GDMenuItem
+ *
+ *  @param inTitle         - Title of the menu item
+ *  @param inDisplayOrder  - Display order of the menu item
+ *  @param inIconImageName - Associated image displayed in the menu item cell
+ *
+ *  @return GDMenuItem instance
+ */
+- (instancetype) initWithTitle:(NSString *)inTitle andDisplayOrder:(NSInteger)inDisplayOrder andIconImageName:(NSString *)inIconImageName;
 
 @end

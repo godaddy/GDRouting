@@ -25,7 +25,7 @@ static NSString *const MenuItemTitle = @"MANATEES";
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:MenuItemTitle iconImageName:nil];
+	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:MenuItemTitle andIconImageName:nil];
 	return @[menuItem];
 }
 

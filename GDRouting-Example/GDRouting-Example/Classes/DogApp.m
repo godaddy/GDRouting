@@ -16,8 +16,9 @@
 
 static NSString *const StoryboardName = @"Main";
 static NSString *const ViewControllerIdentifier = @"DogViewController";
+static NSString *const MoarDogViewControllerIdentifier = @"MoarDogViewController";
 static NSString *const MenuItemTitle = @"DOGS";
-
+static NSString *const SecondMenuItemTitle = @"MOAR DOGS";
 + (UINavigationController *)baseNavigationController
 {
 	return [[UINavigationController alloc] initWithRootViewController:[UIStoryboard instantiateViewControllerWithIdentifier:ViewControllerIdentifier andStoryboardName:StoryboardName]];
@@ -25,19 +26,28 @@ static NSString *const MenuItemTitle = @"DOGS";
 
 + (NSArray *)menuItems
 {
-	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:MenuItemTitle iconImageName:nil];
-	return @[menuItem];
+	GDMenuItem *menuItem = [[GDMenuItem alloc] initWithTitle:MenuItemTitle andDisplayOrder:0];
+    menuItem.sectionTitle = @"WOOF";
+    GDMenuItem *secondItem = [[GDMenuItem alloc] initWithTitle:SecondMenuItemTitle andDisplayOrder:1];
+	return @[secondItem, menuItem];
 }
 
 + (NSDictionary *)routesToRegister
 {
-	GDRoute *route = [GDRoute routeWithURLString:[NSString stringWithFormat:@"/%@", ViewControllerIdentifier] andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
+	GDRoute *route = [GDRoute routeWithURLString:[NSString stringWithFormat:@"/%@", ViewControllerIdentifier] andDisplayOrder:0 andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
         UINavigationController *navController = [DogApp baseNavigationController];
 	    [routingDelegate presentRoutedViewController:navController animated:YES parameters:nil];
 	    return YES;
 	}];
     
-    NSDictionary *routeDictionary = @{ViewControllerIdentifier : route};
+    GDRoute *secondRoute = [GDRoute routeWithURLString:[NSString stringWithFormat:@"/%@", MoarDogViewControllerIdentifier] andDisplayOrder:1 andAction: ^BOOL (id <GDRoutingDelegate> routingDelegate, NSString *urlString, NSDictionary *parameters) {
+        
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[UIStoryboard instantiateViewControllerWithIdentifier:MoarDogViewControllerIdentifier andStoryboardName:@"Main"]];
+	    [routingDelegate presentRoutedViewController:navController animated:YES parameters:nil];
+	    return YES;
+	}];
+
+    NSDictionary *routeDictionary = @{ViewControllerIdentifier : route, MoarDogViewControllerIdentifier : secondRoute};
 	return routeDictionary;
 }
 

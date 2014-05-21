@@ -10,7 +10,7 @@
 
 @implementation GDMenuItem
 
-- (instancetype) initWithTitle:(NSString *)inTitle iconImageName:(NSString *)inIconImageName
+- (instancetype) initWithTitle:(NSString *)inTitle andIconImageName:(NSString *)inIconImageName
 {
     self = [super init];
     if( self != nil )
@@ -21,4 +21,23 @@
     return self;
 }
 
+- (instancetype) initWithTitle:(NSString *)inTitle andDisplayOrder:(NSInteger)inDisplayOrder
+{
+    self = [self initWithTitle:inTitle andIconImageName:nil];
+    if( self != nil )
+    {
+        self.displayOrder = inDisplayOrder;
+    }
+    return self;
+}
+
+- (instancetype) initWithTitle:(NSString *)inTitle andDisplayOrder:(NSInteger)inDisplayOrder andIconImageName:(NSString *)inIconImageName
+{
+    self = [self initWithTitle:inTitle andIconImageName:inIconImageName];
+    if( self != nil )
+    {
+        self.displayOrder = inDisplayOrder;
+    }
+    return self;
+}
 @end

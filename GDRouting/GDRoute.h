@@ -79,6 +79,10 @@ typedef BOOL (^GDRoutingBlock)(id<GDRoutingDelegate>, NSString *, NSDictionary *
 @property (nonatomic, strong) GDRoutingBlock routingBlock;
 
 /**
+ *  Order the associated menu item should be displayed in
+ */
+@property (nonatomic) NSInteger displayOrder;
+/**
  *  Class method that returns a route configured with the passed in url string and routing block
  *
  *  @param inURLString    - Url string path to the view controller you want to load
@@ -88,6 +92,7 @@ typedef BOOL (^GDRoutingBlock)(id<GDRoutingDelegate>, NSString *, NSDictionary *
  */
 +(instancetype)routeWithURLString:(NSString *)inURLString andAction:(GDRoutingBlock)inRoutingBlock;
 
++(instancetype)routeWithURLString:(NSString *)inURLString andDisplayOrder:(NSInteger)inDisplayOrder andAction:(GDRoutingBlock)inRoutingBlock;
 /**
  *  Returns a URL object created from the base app url string and the url string from the GDRoute
  *
