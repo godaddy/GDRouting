@@ -73,3 +73,17 @@ manateeApp.appName = @"ManateeApp";
 <h2>GDAppConfiguration</h2>
 
 GDAppConfiguration is an archivable object used to store configuration information about the app. 
+
+<pre>
+    GDAppConfiguration *appConfiguration = [[GDAppConfiguration alloc] init];
+    appConfiguration.usableAppArray = @[manateeApp];
+    [appConfiguration archiveObject];
+</pre>
+
+<h2>GDAppManager</h2>
+GDAppManager provides functionality to get all the available GDMenuItems and GDRoutes configured in an application using an array of GDUsableApps. It is also used to set up all your routes.
+
+<pre>
+    GDAppManager *appManager = [[GDAppManager alloc] initWithUsableAppArray:appConfiguration.usableAppArray];
+    [appManager registerRoutesForAppsWithRoutingDelegate:self];
+</pre>
