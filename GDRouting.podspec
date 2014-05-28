@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name          = "GDRouting"
   s.version       = "0.0.1"
-  s.summary       = "Search results app for the GDDiscovery App"
+  s.summary       = "GDRouting is a framework for using private CocoaPod repositories to modularizing a large application into sub-applications"
   s.homepage      = "https://www.godaddy.com"
   s.license       = { :'type' => 'GoDaddy', :'file' => 'LICENSE' }
   s.author        = { "Jonah Neugass" => "jneugass@godaddy.com" }

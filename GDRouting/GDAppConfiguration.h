@@ -22,6 +22,6 @@
 /**
  *  Grabs the CFBundleURLSchemes from the info.plist for use creating an x-callback-url link to one of the configured sub applications.
  */
-@property(strong, nonatomic) NSString *baseCallbackURLString;
+@property(strong, nonatomic, readonly) NSString *baseCallbackURLString;
 
 @end
